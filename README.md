@@ -1,6 +1,6 @@
 # project4-sklearn
 
-<include a CircleCI status badge, here>
+[![CircleCI](https://circleci.com/gh/sarahlyne46/project4-sklearn/tree/main.svg?style=svg)](https://circleci.com/gh/sarahlyne46/project4-sklearn/tree/main)
 
 ## Project Overview
 
