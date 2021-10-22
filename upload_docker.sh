@@ -5,11 +5,12 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath="sarahlyne46/project4-sklearn"
 
 # Step 2:  
 # Authenticate & tag
+docker login --username "sarahlyne46" && docker image tag api $dockerpath
 echo "Docker ID and Image: $dockerpath"
 
 # Step 3:
-# Push image to a docker repository
+docker push $dockerpath
