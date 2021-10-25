@@ -29,6 +29,7 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 * Create a virtualenv and activate it
 * Run `make install` to install the necessary dependencies
+* Re-size environment is required to add more space(default is 50GB)): ./resize.sh
 
 ### Running `app.py`
 
@@ -46,3 +47,8 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ### Update git
 
 * Standalone: run './git-commands.sh'
+
+### Output files
+
+* Task 3: Improve Logging & Save Output: docker_out.txt
+* Task 6: Deploy with Kubernetes and Save Output Logs: kubernetes_out.txt
