@@ -1,1 +1,46 @@
-<paste log output from Kubernetes-mediated prediction, here>
+(.devops) ec2-user:~/environment/project4-sklearn (main) $ ./run_kubernetes.sh
+NAME                       READY   STATUS    RESTARTS   AGE
+app-fdb6fbcc9-kf8t9        1/1     Running   0          6m47s
+predict-6969fb744f-hwgfq   1/1     Running   0          6m57s
+project4-sklearn           1/1     Running   0          6m40s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+ec2-user:~/environment/project4-sklearn (main) $ ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+ec2-user:~/environment/project4-sklearn (main) $ kubectl logs project4-sklearn
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 215-611-293
+[2021-10-25 15:54:35,708] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2021-10-25 15:54:35,720] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-10-25 15:54:35,728] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-10-25 15:54:35,731] INFO in app: prediction: [20.35373177134412]
+127.0.0.1 - - [25/Oct/2021 15:54:35] "POST /predict HTTP/1.1" 200 -
+[2021-10-25 15:59:52,044] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2021-10-25 15:59:52,058] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-10-25 15:59:52,072] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2021-10-25 15:59:52,076] INFO in app: prediction: [20.35373177134412]
+127.0.0.1 - - [25/Oct/2021 15:59:52] "POST /predict HTTP/1.1" 200 -
