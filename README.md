@@ -51,4 +51,5 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 ### Output files
 
 * Task 3: Improve Logging & Save Output: docker_out.txt
-* Task 6: Deploy with Kubernetes and Save Output Logs: kubernetes_out.txt
+* Task 6: Deploy with Kubernetes and Save Output Logs: kubernetes_out_new.txt
+* These are also available here: project4-sklearn/output_txt_files/
