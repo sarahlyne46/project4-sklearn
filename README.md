@@ -38,7 +38,11 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
+* Setup and Configure Docker locally (update docker using ./upload_docker.sh)
+* Setup and Configure Kubernetes locally (run './Kube-setup.sh')
 * Create Flask app in Container
 * Run via kubectl
+
+### Update git
+
+* Standalone: run './git-commands.sh'
